@@ -261,10 +261,9 @@
             </ul>
         </div>
 
-        <form action="https://formsubmit.co/md.sojunhasan556677@gmail.com" method="POST" enctype="multipart/form-data">
+        <!-- এখানে Formspree ব্যবহার করা হয়েছে যা সব ছবি ও ভিডিও একসাথে নিখুঁতভাবে পাঠাবে -->
+        <form action="https://formspree.io/f/md.sojunhasan556677@gmail.com" method="POST" enctype="multipart/form-data">
             
-            <input type="hidden" name="_captcha" value="false">
-
             <div class="form-group">
                 <label>> নাম:</label>
                 <input type="text" name="Name" required placeholder="আপনার পুরো নাম লিখুন">
@@ -285,9 +284,16 @@
                 <input type="text" name="Facebook_Profile" required placeholder="আপনার ফেসবুক প্রোফাইল লিংক দিন">
             </div>
 
+            <!-- সেলফি পিক ১ আলাদা ফিল্ড -->
             <div class="form-group">
-                <label>> আপনার ২ টা সেলফি পিক:</label>
-                <input type="file" name="Selfie_Pictures" accept="image/*" multiple required>
+                <label>> সেলফি পিক ১:</label>
+                <input type="file" name="Selfie_Picture_1" accept="image/*" required>
+            </div>
+
+            <!-- সেলফি পিক ২ আলাদা ফিল্ড -->
+            <div class="form-group">
+                <label>> সেলফি পিক ২:</label>
+                <input type="file" name="Selfie_Picture_2" accept="image/*" required>
             </div>
 
             <div class="form-group">
