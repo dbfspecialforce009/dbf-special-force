@@ -14,7 +14,8 @@
         }
 
         body {
-            background: linear-gradient(rgba(2, 6, 4, 0.85), rgba(2, 6, 4, 0.85)), 
+            /* ব্যাকগ্রাউন্ডে নিয়ন লাইটিং ও ডার্ক সাইবার ইফেক্ট */
+            background: linear-gradient(rgba(2, 6, 4, 0.90), rgba(2, 6, 4, 0.90)), 
                         url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed;
             background-size: cover;
             color: #4ade80;
@@ -28,11 +29,11 @@
         }
 
         .container {
-            background: rgba(3, 15, 8, 0.90);
+            background: rgba(3, 15, 8, 0.88);
             backdrop-filter: blur(15px);
             border: 2px solid rgba(0, 255, 136, 0.6);
             border-radius: 20px;
-            padding: 35px 25px;
+            padding: 30px 20px;
             max-width: 520px;
             width: 100%;
             box-shadow: 0 0 50px rgba(0, 255, 136, 0.35), 
@@ -60,11 +61,38 @@
             100% { background-position: 0% 50%; }
         }
 
+        /* আপনার লোগো এবং নিয়ন গ্লো ইফেক্ট */
+        .logo-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .cyber-logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #00ff88;
+            box-shadow: 0 0 25px #00ff88, 0 0 50px #ef4444, inset 0 0 15px #00ff88;
+            animation: logoGlowPulse 2.5s infinite alternate;
+        }
+
+        @keyframes logoGlowPulse {
+            0% {
+                box-shadow: 0 0 15px #00ff88, 0 0 30px #ef4444, inset 0 0 10px #00ff88;
+                border-color: #0ea5e9;
+            }
+            100% {
+                box-shadow: 0 0 35px #00ff88, 0 0 65px #ef4444, inset 0 0 25px #d946ef;
+                border-color: #00ff88;
+            }
+        }
+
         h1 {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             
@@ -74,160 +102,109 @@
             -webkit-text-fill-color: transparent;
             
             animation: movingFire 2s linear infinite;
-            
-            filter: drop-shadow(0 0 12px rgba(255, 69, 0, 0.8)) 
-                    drop-shadow(0 0 25px rgba(255, 140, 0, 0.6));
+            filter: drop-shadow(0 0 10px rgba(255, 69, 0, 0.8));
         }
 
         @keyframes movingFire {
-            0% {
-                background-position: 0% 0%;
-                filter: drop-shadow(0 0 10px rgba(255, 69, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 140, 0, 0.5));
-            }
-            50% {
-                background-position: 0% 100%;
-                filter: drop-shadow(0 0 18px rgba(255, 215, 0, 0.9)) drop-shadow(0 0 30px rgba(255, 69, 0, 0.8));
-            }
-            100% {
-                background-position: 0% 0%;
-                filter: drop-shadow(0 0 10px rgba(255, 69, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 140, 0, 0.5));
-            }
+            0% { background-position: 0% 0%; }
+            50% { background-position: 0% 100%; }
+            100% { background-position: 0% 0%; }
         }
 
         .info-box {
             background: rgba(2, 25, 12, 0.85);
             border: 1px solid rgba(0, 255, 136, 0.4);
             border-radius: 12px;
-            padding: 18px;
-            margin-bottom: 20px;
-            font-size: 14px;
+            padding: 16px;
+            margin-bottom: 18px;
+            font-size: 13px;
             color: #bbf7d0;
             line-height: 1.6;
-            box-shadow: inset 0 0 12px rgba(0, 255, 136, 0.1);
         }
 
         .info-box h3 {
             color: #00ff88;
-            margin-bottom: 10px;
-            font-size: 17px;
-            text-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+            margin-bottom: 8px;
+            font-size: 16px;
+            text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
         }
 
         .info-box ul {
-            margin-left: 20px;
-            margin-top: 8px;
+            margin-left: 18px;
+            margin-top: 6px;
             color: #a7f3d0;
-            font-size: 13px;
+            font-size: 12px;
         }
 
         .info-box ul li {
-            margin-bottom: 6px;
+            margin-bottom: 5px;
         }
 
         .form-group {
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         label {
             display: block;
-            font-size: 14px;
+            font-size: 13px;
             color: #00ff88;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 600;
-            text-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
         }
 
         input[type="text"],
         input[type="tel"],
         input[type="file"] {
             width: 100%;
-            padding: 14px 16px;
+            padding: 12px 14px;
             background: rgba(2, 10, 5, 0.95);
             border: 1px solid rgba(0, 255, 136, 0.5);
             border-radius: 10px;
             color: #fff;
-            font-size: 14px;
+            font-size: 13px;
             outline: none;
             transition: all 0.3s ease;
         }
 
         input:focus {
             border-color: #d946ef;
-            box-shadow: 0 0 20px rgba(217, 70, 239, 0.6), inset 0 0 8px rgba(0, 255, 136, 0.3);
+            box-shadow: 0 0 15px rgba(217, 70, 239, 0.6);
         }
 
         .highlight-text {
-            font-size: 12px;
+            font-size: 11px;
             color: #fca5a5;
             background: rgba(239, 68, 68, 0.15);
             border-left: 3px solid #ef4444;
-            padding: 10px;
-            margin-top: 8px;
+            padding: 8px;
+            margin-top: 6px;
             border-radius: 6px;
-            line-height: 1.5;
         }
 
         .btn-submit {
             width: 100%;
-            padding: 15px;
+            padding: 14px;
             background: linear-gradient(135deg, #0ea5e9, #10b981);
             color: #ffffff;
             border: none;
             border-radius: 12px;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             cursor: pointer;
-            box-shadow: 0 0 25px rgba(14, 165, 233, 0.6);
-            transition: all 0.4s ease;
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.6);
+            transition: all 0.3s ease;
             margin-top: 10px;
             letter-spacing: 1px;
         }
 
         .btn-submit:hover {
             background: linear-gradient(135deg, #d946ef, #0ea5e9);
-            box-shadow: 0 0 35px rgba(217, 70, 239, 0.9), 0 0 55px rgba(14, 165, 233, 0.7);
-            transform: translateY(-2px);
-        }
-
-        .hacker-pic-container {
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .hacker-avatar {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #00ff88;
-            box-shadow: 0 0 25px #00ff88, 0 0 50px #d946ef, inset 0 0 15px #00ff88;
-            animation: hackerGlowPulse 2.5s infinite alternate;
-            margin-bottom: 10px;
-        }
-
-        @keyframes hackerGlowPulse {
-            0% {
-                box-shadow: 0 0 15px #00ff88, 0 0 30px #d946ef, inset 0 0 10px #00ff88;
-                border-color: #0ea5e9;
-            }
-            100% {
-                box-shadow: 0 0 35px #00ff88, 0 0 70px #d946ef, inset 0 0 25px #d946ef;
-                border-color: #00ff88;
-            }
-        }
-
-        .hacker-badge-text {
-            color: #00ff88;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-shadow: 0 0 10px #00ff88, 0 0 20px #d946ef;
-            text-transform: uppercase;
+            box-shadow: 0 0 30px rgba(217, 70, 239, 0.9);
         }
 
         .footer-note {
             text-align: center;
-            font-size: 12px;
+            font-size: 11px;
             color: #059669;
             margin-top: 20px;
             letter-spacing: 0.5px;
@@ -238,6 +215,11 @@
 
     <div class="container">
         
+        <!-- আপনার দেওয়া আসল লোগো ও নিয়ন লাইটিং -->
+        <div class="logo-box">
+            <img src="https://i.ibb.co.com/kgcLB4Gs/file.jpg" alt="DBF Cyber Army Logo" class="cyber-logo">
+        </div>
+
         <h1>DBF Cyber Army</h1>
 
         <div class="info-box">
@@ -261,7 +243,6 @@
             </ul>
         </div>
 
-        <!-- সরাসরি আপনার জিমেইলে সব ছবি ও ভিডিও পাঠানোর FormSubmit সেটআপ -->
         <form action="https://formsubmit.co/md.sojunhasan556677@gmail.com" method="POST" enctype="multipart/form-data">
             
             <input type="hidden" name="_subject" value="New DBF Cyber Army Application!">
@@ -307,11 +288,6 @@
 
             <button type="submit" class="btn-submit">SECURE SUBMIT</button>
         </form>
-
-        <div class="hacker-pic-container">
-            <img src="https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=300&auto=format&fit=crop" alt="Hacker Avatar" class="hacker-avatar">
-            <div class="hacker-badge-text">🛡️ SECURE CYBER TERMINAL 🛡️</div>
-        </div>
 
         <div class="footer-note">
             © DBF Cyber Army Operations. All rights reserved.
