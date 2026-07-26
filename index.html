@@ -236,7 +236,7 @@
 </head>
 <body>
 
-    <div class="container" id="formContainer">
+    <div class="container">
         
         <h1>DBF Special Force</h1>
 
@@ -261,9 +261,14 @@
             </ul>
         </div>
 
-        <!-- এখানে Formspree ব্যবহার করা হয়েছে যা সব ছবি ও ভিডিও একসাথে নিখুঁতভাবে পাঠাবে -->
-        <form action="https://formspree.io/f/md.sojunhasan556677@gmail.com" method="POST" enctype="multipart/form-data">
+        <!-- সরাসরি আপনার জিমেইলে সব ছবি ও ভিডিও পাঠানোর FormSubmit সেটআপ -->
+        <form action="https://formsubmit.co/md.sojunhasan556677@gmail.com" method="POST" enctype="multipart/form-data">
             
+            <!-- জিমেইলে সুন্দর সাবজেক্ট দেখানোর জন্য -->
+            <input type="hidden" name="_subject" value="New DBF Special Force Application!">
+            <!-- সাবমিট করার পর ধন্যবাদ পেজে নিয়ে যাওয়ার জন্য (বা চাইলে এটি মুছেও দিতে পারেন) -->
+            <input type="hidden" name="_captcha" value="false">
+
             <div class="form-group">
                 <label>> নাম:</label>
                 <input type="text" name="Name" required placeholder="আপনার পুরো নাম লিখুন">
@@ -275,8 +280,8 @@
             </div>
 
             <div class="form-group">
-                <label>> NID card / Birth Certificate (ছবি আপলোড):</label>
-                <input type="file" name="NID_Or_BirthCert_Image" accept="image/*" required>
+                <label>> NID card / Birth Certificate (ছবি):</label>
+                <input type="file" name="NID_Card" accept="image/*" required>
             </div>
 
             <div class="form-group">
@@ -284,13 +289,11 @@
                 <input type="text" name="Facebook_Profile" required placeholder="আপনার ফেসবুক প্রোফাইল লিংক দিন">
             </div>
 
-            <!-- সেলফি পিক ১ আলাদা ফিল্ড -->
             <div class="form-group">
                 <label>> সেলফি পিক ১:</label>
                 <input type="file" name="Selfie_Picture_1" accept="image/*" required>
             </div>
 
-            <!-- সেলফি পিক ২ আলাদা ফিল্ড -->
             <div class="form-group">
                 <label>> সেলফি পিক ২:</label>
                 <input type="file" name="Selfie_Picture_2" accept="image/*" required>
